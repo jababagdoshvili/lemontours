@@ -1,0 +1,154 @@
+@font-face { font-family:bebas; src: url('fonts/bebas-neue-bold.otf'); }
+@font-face { font-family:numbers; src: url('fonts/A-Space Heavy Demo.otf'); }
+@font-face { font-family:bpgweb; src: url('fonts/bpg_web_002_caps.ttf'); }
+
+* {
+	margin: 0;
+}
+
+
+#main_container {
+    height: 100vh;
+    width: 100%;
+    background-image: radial-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)) , url("images/lemonbg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.logo_area {
+	position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.intro_text {
+	position: absolute;
+    top: 20%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.intro_text h1 {
+	font-size: 50px;
+	color: white;
+	font-family: bebas;
+	position: relative;
+	animation: fadein 10s;
+	 -moz-animation: fadein 10s; /* Firefox */
+	 -webkit-animation: fadein 10s; /* Safari and Chrome */
+	 -o-animation: fadein 10s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.calendar {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+		max-width: 750px;
+}
+.calendar div {
+		width: 155px;
+    height: 155px;
+		border: 1px solid rgba(255,255,255,.3);
+		border-radius: 50%;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    font-family: numbers;
+    flex-direction: column;
+    text-align: center;
+		margin: 0 15px;
+		transition: 0.5s;
+}
+.calendar div:hover {
+	transition: 0.5s;
+	color: #9c6;
+	font-weight: bold;
+	background-color: white;
+}
+.calendar div span {
+	color: #9c6;
+	font-size: 13px;
+	font-family: bpgweb;
+}
+
+@media only screen and (max-width: 1180px) {
+		.intro_text h1 {
+			font-size: 40px;
+		}
+}
+@media only screen and (max-width: 940px) {
+		.intro_text h1 {
+			font-size: 30px;
+		}
+}
+@media only screen and (max-width: 790px) {
+		.calendar div {
+			margin: 0 5px;
+		}
+}
+@media only screen and (max-width: 690px) {
+		.calendar div {
+			font-size: 30px;
+			width: 125px;
+			height: 125px;
+		}
+}
+@media only screen and (max-width: 560px) {
+	.calendar {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.calendar div {
+		margin: 10px 15px;
+	}
+}
+@media only screen and (max-width: 360px) {
+		.calendar div {
+			width: 100px;
+			height: 100px;
+			margin: 10px 5px;
+		}
+		.intro_text h1 {
+    	font-size: 20px;
+		}
+}
